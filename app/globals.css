@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #2477a8;
+  --secondary: #62b894;
+  --ink: #10233f;
+  --paper: #fffdf8;
+  --line: rgba(148, 163, 184, 0.2);
+  --font-body: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-display: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-accent: "Brush Script MT", "Segoe Script", cursive;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  color: var(--ink);
+  background: var(--paper);
+  text-rendering: optimizeLegibility;
+}
+::selection { background: rgba(98, 184, 148, .28); }
+
+@layer components {
+  .shell { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10; }
+  .section { @apply py-20 sm:py-24 lg:py-28; }
+  .eyebrow { @apply mb-4 inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[.15em] text-[var(--primary)]; }
+  .button-primary { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[var(--primary)] px-6 py-3 text-sm font-extrabold text-white shadow-lg shadow-pink-200/60 transition duration-200 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2; }
+  .button-secondary { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-pink-200 bg-white px-6 py-3 text-sm font-extrabold text-ink shadow-sm transition duration-200 hover:border-[var(--primary)] hover:bg-pink-50 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2; }
+  .card { @apply rounded-[1.75rem] border border-pink-100 bg-white shadow-sm; }
+  .field { @apply mt-2 min-h-12 w-full rounded-2xl border border-pink-200 bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-slate-400 focus:border-[var(--primary)] focus:ring-2 focus:ring-pink-100; }
+  .clean-card { @apply border-t border-slate-200 bg-transparent transition duration-300 hover:border-[var(--primary)]; }
+  .icon-tile { @apply grid place-items-center border border-sky-100 bg-sky-50 text-[var(--primary)]; }
+  .glass-panel { @apply border border-slate-200 bg-white shadow-md; }
+}
+
+.image-fade-left {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 24%, black 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 24%, black 100%);
+}
+
+.image-fade-right {
+  -webkit-mask-image: linear-gradient(to left, transparent 0%, black 22%, black 100%);
+  mask-image: linear-gradient(to left, transparent 0%, black 22%, black 100%);
+}
+
+@media (max-width: 1023px) {
+  .image-fade-left,
+  .image-fade-right {
+    -webkit-mask-image: linear-gradient(to bottom, black 68%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 68%, transparent 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
