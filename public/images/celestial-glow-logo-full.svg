@@ -1,0 +1,23 @@
+<svg width="760" height="240" viewBox="0 0 760 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pink" x1="110" y1="20" x2="650" y2="210">
+      <stop stop-color="#FBE1EA"/>
+      <stop offset=".5" stop-color="#B95379"/>
+      <stop offset="1" stop-color="#7A2E47"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="80" y1="20" x2="222" y2="210">
+      <stop stop-color="#FFF0B8"/>
+      <stop offset=".5" stop-color="#E9B96D"/>
+      <stop offset="1" stop-color="#A86D2B"/>
+    </linearGradient>
+  </defs>
+  <circle cx="112" cy="120" r="82" fill="#F9D2DE"/>
+  <circle cx="112" cy="120" r="74" stroke="url(#gold)" stroke-width="6"/>
+  <path d="M91 137c15 16 43 17 59 2" stroke="#8B314E" stroke-width="6" stroke-linecap="round"/>
+  <path d="M154 76l10-17 10 17 17 10-17 10-10 17-10-17-17-10 17-10z" fill="#FFF5C8" stroke="#D9A654" stroke-width="3"/>
+  <text x="112" y="130" text-anchor="middle" font-family="Georgia, serif" font-size="56" font-style="italic" fill="#8B314E">CG</text>
+  <text x="220" y="106" font-family="Georgia, serif" font-size="66" font-style="italic" fill="url(#pink)">Celestial Glow</text>
+  <text x="226" y="156" font-family="Avenir Next, Arial, sans-serif" font-size="29" font-weight="800" letter-spacing="10" fill="#7A2E47">CLEANING CO.</text>
+  <path d="M620 54l8-14 8 14 14 8-14 8-8 14-8-14-14-8 14-8z" fill="#E9B96D"/>
+  <path d="M676 132l6-10 6 10 10 6-10 6-6 10-6-10-10-6 10-6z" fill="#F3CB82"/>
+</svg>

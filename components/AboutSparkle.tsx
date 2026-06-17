@@ -16,7 +16,7 @@ export default function AboutSparkle() {
           </div>
         </Reveal>
         <Reveal delay={.08}>
-          <span className="eyebrow"><Sparkles size={14} />About Sparkle</span>
+          <span className="eyebrow"><Sparkles size={14} />The pressure-off clean</span>
           <h2 className="max-w-2xl font-[var(--font-display)] text-3xl font-extrabold leading-[1.12] tracking-[-.035em] text-ink sm:text-4xl lg:text-5xl">{business.about.heroTitle}</h2>
           <p className="mt-6 text-lg leading-8 text-slate-700">{business.about.story}</p>
           <div className="mt-8 rounded-[1.75rem] border border-pink-100 bg-white p-6 shadow-sm">

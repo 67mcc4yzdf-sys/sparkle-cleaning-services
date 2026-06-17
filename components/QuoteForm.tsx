@@ -61,20 +61,24 @@ export default function QuoteForm({ initialService = "" }: { initialService?: st
     <div className="mb-7 border-b border-slate-200 pb-6">
       <p className="text-xs font-extrabold uppercase tracking-[.14em] text-[var(--primary)]">1. Tell us about the clean</p>
       <div className="mt-4 grid gap-5 sm:grid-cols-2">
-        <label className="text-sm font-bold">Type of cleaning<select required name="service" defaultValue={validInitialService} className="field"><option value="">Select a service</option>{business.services.map(s => <option key={s.title} value={s.title}>{s.title}</option>)}</select></label>
-        <label className="text-sm font-bold">Property type<input required name="propertyType" maxLength={100} placeholder="e.g. house, flat, B&B, office" className="field" /></label>
-        <label className="text-sm font-bold sm:col-span-2">Preferred schedule<select required name="frequency" defaultValue="" className="field"><option value="">Select a schedule</option>{business.scheduleOptions.map(option => <option key={option}>{option}</option>)}</select></label>
+        <label className="text-sm font-bold">Type of clean needed<select required name="service" defaultValue={validInitialService} className="field"><option value="">Select a service</option>{business.services.map(s => <option key={s.title} value={s.title}>{s.title}</option>)}</select></label>
+        <label className="text-sm font-bold">Suburb / location<input required name="suburb" maxLength={100} placeholder="e.g. Baldivis, Wellard" className="field" /></label>
+        <label className="text-sm font-bold">Preferred date<input required name="preferredDate" type="date" className="field" /></label>
+        <label className="text-sm font-bold">Preferred schedule<select required name="frequency" defaultValue="" className="field"><option value="">Select a schedule</option>{business.scheduleOptions.map(option => <option key={option}>{option}</option>)}</select></label>
       </div>
     </div>
     <p className="mb-4 text-xs font-extrabold uppercase tracking-[.14em] text-[var(--primary)]">2. Where should we send the quote?</p>
     <div className="grid gap-5 sm:grid-cols-2">
       <label className="text-sm font-bold">Name<input required name="name" maxLength={100} autoComplete="name" placeholder="Your name" className="field" /></label>
       <label className="text-sm font-bold">Phone<input required name="phone" maxLength={30} type="tel" autoComplete="tel" placeholder="e.g. 07900 123456" className="field" /></label>
-      <label className="text-sm font-bold sm:col-span-2">Email<input required name="email" maxLength={254} type="email" autoComplete="email" placeholder="you@example.com" className="field" /></label>
+      <label className="text-sm font-bold sm:col-span-2">Email <span className="font-medium text-slate-400">(optional)</span><input name="email" maxLength={254} type="email" autoComplete="email" placeholder="you@example.com" className="field" /></label>
     </div>
-    <label className="mt-6 block text-sm font-bold">Message<textarea name="message" maxLength={2000} rows={5} placeholder="Tell us what you need cleaned, any priorities, and anything we should know." className="field resize-y" /></label>
+    <label className="mt-6 block text-sm font-bold">Message / details<textarea name="message" maxLength={2000} rows={5} placeholder="Tell us what you need cleaned, any priority rooms, and anything helpful for the enquiry." className="field resize-y" /></label>
     {(status === "error" || status === "not-configured") && <div className="mt-5 flex gap-3 border-l-2 border-amber-500 bg-amber-50 p-4 text-sm leading-6 text-amber-950" role="alert"><AlertCircle className="mt-0.5 shrink-0" size={18} /><p>{status === "not-configured" ? "Online quote delivery will be connected when the business contact details are supplied. Your information has not been sent." : "We could not send your request. Your details are still in the form, so please try again."}</p></div>}
-    <button type="submit" disabled={isSubmitting} className="button-primary mt-6 w-full disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto">{isSubmitting ? <><LoaderCircle className="animate-spin" size={17} />Sending...</> : <>Request a Free Cleaning Quote <Send size={17} /></>}</button>
-    <p className="mt-4 text-xs leading-5 text-slate-500">No obligation. We’ll use your details only to respond to this quote request.</p>
+    <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+      <button type="submit" disabled={isSubmitting} className="button-primary disabled:cursor-not-allowed disabled:opacity-60">{isSubmitting ? <><LoaderCircle className="animate-spin" size={17} />Sending...</> : <>Request a Clean <Send size={17} /></>}</button>
+      <a href={business.socialLinks[0]?.href ?? "#"} target="_blank" rel="noreferrer" className="button-secondary">Message to Book</a>
+    </div>
+    <p className="mt-4 text-xs leading-5 text-slate-500">No obligation. Your details are used only to respond to this cleaning enquiry.</p>
   </form>;
 }

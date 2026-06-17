@@ -10,7 +10,7 @@ export function ServiceIcon({ name }: { name: Service["icon"] }) { const Icon = 
 export default function ServicesSection() {
   return <section className="section border-b border-pink-100 bg-white" id="services"><div className="shell">
     <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-      <SectionTitle align="left" eyebrow="Our services" title="Fresh cleaning for homes, moves and businesses" description="Choose the service that fits your space, schedule and priorities." />
+      <SectionTitle align="left" eyebrow="Services" title="Choose the clean that brings your home back to glow" description="Benefit-focused cleaning options for busy homes, room resets, move support and custom requests." />
       <Link href="/services" className="button-secondary shrink-0">Compare services <ArrowRight size={16} /></Link>
     </div>
     <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">{business.services.map((service, i) =>
@@ -23,7 +23,7 @@ export default function ServicesSection() {
         <p className="mt-3 leading-7 text-slate-600">{service.description}</p>
         <p className="mt-4 text-sm font-bold text-[var(--primary)]">{service.pricingNote}</p>
         <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
-          <Link href={`/contact?service=${encodeURIComponent(service.title)}#quote`} className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-extrabold text-[var(--primary)] shadow-sm">Request Quote <ArrowRight size={16} className="transition group-hover:translate-x-1" /></Link>
+          <Link href={`/contact?service=${encodeURIComponent(service.title)}#quote`} className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-extrabold text-[var(--primary)] shadow-sm">Enquire Now <ArrowRight size={16} className="transition group-hover:translate-x-1" /></Link>
         </div>
       </Reveal>)}
     </div>
