@@ -10,10 +10,10 @@ export default function ReviewsSection() {
     <div className="grid items-end gap-8 lg:grid-cols-[.9fr_1.1fr]">
       <div>
         <span className="eyebrow">Client stories</span>
-        <h2 className="max-w-xl font-[var(--font-display)] text-3xl font-extrabold leading-[1.12] tracking-[-.04em] text-ink sm:text-4xl lg:text-5xl">Fresh spaces clients can feel good about.</h2>
+        <h2 className="max-w-xl font-[var(--font-display)] text-3xl font-extrabold leading-[1.12] tracking-[-.04em] text-ink sm:text-4xl lg:text-5xl">The kind of clean people remember.</h2>
       </div>
       <div className="lg:pb-1">
-        <p className="max-w-xl text-lg leading-8 text-slate-600">Placeholder reviews keep the template ready for verified feedback while showing the tone of a friendly local cleaning service.</p>
+        <p className="max-w-xl text-lg leading-8 text-slate-600">Warm words like these show the feeling Celestial Glow wants every customer to have: relief, freshness and pride in their home.</p>
         <Link href="/contact#quote" className="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-[var(--primary)] transition hover:gap-3">{business.ctaPrimary} <ArrowRight size={16} /></Link>
       </div>
     </div>
@@ -29,6 +29,6 @@ export default function ReviewsSection() {
         <div><p className="font-extrabold text-ink">{review.name}</p><p className="text-sm text-slate-500">{review.service} · {review.area}</p></div>
       </div>
     </Reveal>)}</div>
-    <p className="mt-12 text-center text-xs text-slate-500">Template reviews are placeholders and should be replaced with verified client feedback.</p>
+    <p className="mt-12 text-center text-xs text-slate-500">Client-style examples shown. Replace with real customer words when available.</p>
   </div></section>;
 }

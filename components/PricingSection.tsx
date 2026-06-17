@@ -6,10 +6,10 @@ import SectionTitle from "./SectionTitle";
 
 export default function PricingSection() {
   return (
-    <section className="section bg-[#fff3f7]" id="pricing">
+    <section className="section bg-[#fff3f7]" id="booking">
       <div className="shell grid items-center gap-10 lg:grid-cols-[.9fr_1.1fr]">
         <Reveal>
-          <SectionTitle align="left" eyebrow="Pricing" title={business.pricing.heading} description={business.pricing.explanation} />
+          <SectionTitle align="left" eyebrow="Easy booking" title={business.pricing.heading} description={business.pricing.explanation} />
           <p className="mt-6 font-[var(--font-accent)] text-3xl text-[var(--primary)]">{business.pricing.footer}</p>
         </Reveal>
         <Reveal delay={.08} className="relative">

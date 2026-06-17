@@ -28,14 +28,13 @@ export default function ServicesPage() {
           <Link href="/contact#quote" className="button-primary">Talk through your clean <ArrowRight size={17} /></Link>
           <a href={`tel:${business.phoneHref}`} className="button-secondary"><Phone size={17} />{business.phone}</a>
         </div>
-        <p className="mt-4 text-xs leading-5 text-slate-500">Template team photography should be replaced with a real photo before launch.</p>
       </div>
       </div>
     </section>
 
-    <section className="border-b border-slate-200 bg-slate-50 py-14"><div className="shell grid gap-8 lg:grid-cols-[1fr_.8fr]">
-      <div><span className="eyebrow">Pricing approach</span><h2 className="font-[var(--font-display)] text-3xl font-extrabold tracking-[-.035em]">{business.pricing.heading}</h2><p className="mt-4 max-w-2xl leading-7 text-slate-600">{business.pricing.explanation}</p><p className="mt-3 text-sm leading-6 text-slate-500">{business.pricing.recurringNote}</p></div>
-      <div className="border-l-2 border-[var(--secondary)] bg-white p-6"><h3 className="font-extrabold">Optional add-ons</h3><ul className="mt-4 grid gap-2 sm:grid-cols-2">{business.addOns.map(item => <li key={item} className="flex gap-2 text-sm font-semibold text-slate-700"><Check size={16} className="shrink-0 text-[var(--secondary)]" strokeWidth={3} />{item}</li>)}</ul></div>
+    <section className="border-b border-pink-100 bg-[#fff3f7] py-14"><div className="shell grid gap-8 lg:grid-cols-[1fr_.8fr]">
+      <div><span className="eyebrow">Booking approach</span><h2 className="font-[var(--font-display)] text-3xl font-extrabold tracking-[-.035em]">{business.pricing.heading}</h2><p className="mt-4 max-w-2xl leading-7 text-slate-600">{business.pricing.explanation}</p><p className="mt-3 text-sm leading-6 text-slate-500">{business.pricing.recurringNote}</p></div>
+      <div className="rounded-[1.5rem] border border-pink-100 bg-white p-6 shadow-sm"><h3 className="font-extrabold">Helpful extras</h3><ul className="mt-4 grid gap-2 sm:grid-cols-2">{business.addOns.map(item => <li key={item} className="flex gap-2 text-sm font-semibold text-slate-700"><Check size={16} className="shrink-0 text-[var(--secondary)]" strokeWidth={3} />{item}</li>)}</ul></div>
     </div></section>
 
     <section className="section"><div className="shell">
