@@ -54,10 +54,10 @@ export default function Hero() {
             <Image src={business.images.hero} alt="A clean, cozy living room" fill priority sizes="(max-width: 1024px) 100vw, 48vw" className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-tr from-pink-100/30 via-transparent to-[#e9b96d]/20" />
           </div>
-          <div className="absolute -bottom-5 right-4 rounded-3xl border border-pink-100 bg-white/95 px-5 py-4 shadow-xl sm:right-6">
+          <div className="mt-4 w-fit rounded-3xl border border-pink-100 bg-white/95 px-5 py-4 shadow-xl sm:absolute sm:-bottom-5 sm:right-6 sm:mt-0">
             <p className="font-[var(--font-accent)] text-2xl leading-none text-[var(--primary)]">fresh, calm, glowing</p>
           </div>
-          <a href={business.socialLinks[0]?.href ?? "#"} target="_blank" rel="noreferrer" className="absolute -bottom-5 left-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#3f2931] px-5 py-3 text-sm font-extrabold text-white shadow-xl shadow-pink-200/70"><Instagram size={17} />{business.instagram}</a>
+          <a href={business.socialLinks[0]?.href ?? "#"} target="_blank" rel="noreferrer" className="mt-3 inline-flex min-h-12 max-w-full items-center justify-center gap-2 rounded-full bg-[#3f2931] px-5 py-3 text-sm font-extrabold text-white shadow-xl shadow-pink-200/70 sm:absolute sm:-bottom-5 sm:left-6 sm:mt-0"><Instagram size={17} className="shrink-0" /><span className="truncate">{business.instagram}</span></a>
         </motion.div>
       </div>
     </section>
