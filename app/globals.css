@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --primary: #2477a8;
-  --secondary: #62b894;
+  --primary: #b95379;
+  --secondary: #e9b96d;
   --ink: #3f2931;
   --paper: #fff9fb;
   --line: rgba(148, 163, 184, 0.2);

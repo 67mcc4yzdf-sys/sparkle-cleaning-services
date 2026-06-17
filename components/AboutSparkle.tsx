@@ -21,9 +21,11 @@ export default function AboutSparkle() {
           <p className="mt-6 text-lg leading-8 text-slate-700">{business.about.story}</p>
           <div className="mt-8 rounded-[1.75rem] border border-pink-100 bg-white p-6 shadow-sm">
             <div className="flex items-start gap-4">
-              <span className="grid size-12 shrink-0 place-items-center rounded-full bg-pink-100 text-[var(--primary)]"><Heart size={22} /></span>
+              <span className="grid size-16 shrink-0 place-items-center rounded-full bg-white p-1 shadow-md shadow-pink-100 ring-1 ring-pink-100">
+                <Image src="/images/celestial-glow-original-logo.png" alt="" width={58} height={58} quality={100} className="rounded-full" />
+              </span>
               <div>
-                <h3 className="font-extrabold">{business.about.ownerHeading}</h3>
+                <h3 className="font-extrabold"><Heart className="mr-2 inline text-[var(--primary)]" size={18} />{business.about.ownerHeading}</h3>
                 <p className="mt-2 leading-7 text-slate-600">{business.about.ownerText}</p>
               </div>
             </div>
