@@ -25,7 +25,9 @@ export default function Header() {
       <header className={`sticky top-0 z-50 border-b border-pink-100 bg-white/85 backdrop-blur-2xl transition-all ${scrolled ? "shadow-[0_10px_35px_rgba(200,111,145,.12)]" : ""}`}>
         <div className={`shell flex items-center justify-between transition-all ${scrolled ? "h-16" : "h-20"}`}>
           <Link href="/" className="flex items-center gap-3" aria-label={`${business.businessName} home`}>
-            <Image src="/images/celestial-glow-logo-mark.svg" alt="" width={46} height={46} className="rounded-full shadow-sm shadow-pink-100" priority />
+            <span className="grid size-14 place-items-center rounded-full bg-white p-1 shadow-sm shadow-pink-100 ring-1 ring-pink-100">
+              <Image src="/images/celestial-glow-original-logo.png" alt="" width={52} height={52} quality={100} className="rounded-full" priority />
+            </span>
             <span className="leading-none">
               <span className="block font-[var(--font-accent)] text-3xl leading-none text-[var(--primary)]">{business.logoText}</span>
               <span className="block text-[9px] font-extrabold uppercase tracking-[.24em] text-[#8b314e]">Cleaning Co.</span>

@@ -17,7 +17,9 @@ export default function Hero() {
       <div className="shell relative z-10 grid gap-10 py-12 sm:py-16 lg:min-h-[720px] lg:grid-cols-[1fr_.92fr] lg:items-center lg:py-20">
         <div className="max-w-2xl">
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="mb-7 inline-flex items-center gap-3 rounded-full border border-pink-200 bg-white/85 px-4 py-2 shadow-sm shadow-pink-100">
-            <Image src="/images/celestial-glow-logo-mark.svg" alt="" width={44} height={44} className="rounded-full" priority />
+            <span className="grid size-16 place-items-center rounded-full bg-white p-1 shadow-sm ring-1 ring-pink-100">
+              <Image src="/images/celestial-glow-original-logo.png" alt="" width={60} height={60} quality={100} className="rounded-full" priority />
+            </span>
             <div>
               <p className="font-[var(--font-accent)] text-2xl leading-none text-[var(--primary)]">{business.logoText}</p>
               <p className="mt-1 text-[10px] font-extrabold uppercase tracking-[.2em] text-pink-500">Cleaning Co.</p>
